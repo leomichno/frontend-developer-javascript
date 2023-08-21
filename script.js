@@ -1,12 +1,19 @@
 const commandMenuActivator=document.querySelector('.navbar-email');
 const desktopMenu=document.querySelector('.desktop-menu');
-const cardsConteiner=document.querySelector('.cards-container')
+const cardsConteiner=document.querySelector('.cards-container');
+const productCardDetail=document.querySelector('.product-detail');
+const navbarCard=document.querySelector('.navbar-shopping-cart');
+
+
+navbarCard.addEventListener('click',activator2);
 commandMenuActivator.addEventListener('click', activator);
 
-
+function activator2(){
+    productCardDetail.classList.toggle('inactivity');
+}
 function activator(){
-    desktopMenu.classList.toggle('inactivity')
-}   
+    desktopMenu.classList.toggle('inactivity');
+}  
 
 const productos=[];
 productos.push({img:"https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
@@ -67,3 +74,4 @@ for ( product of productos ){
 
    cardsConteiner.appendChild(productCard);
 }
+
